@@ -4,15 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Iceberg&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>DriveShow-Project</title>
 </head>
 
 <body>
+    <!--CABEÇALHO DO SITW -->
     <header>
-        <h1 class="logo">DriveShow</h1>
+        <!-- LOGO -->
+        <h1 alt="Logo-site">Drive⚙Show</h1>
 
+        <!--MENU DE NAVEGAÇÃO -->
         <nav class="navbar">
             <ul>
                 <li><a href="#home">Home</a></li>
@@ -22,10 +32,15 @@
         </nav>
     </header>
 
-    <section class="box-container" id="home">
+    <!--HERO SECTION -->
+    <section class="hero-section" id="home">
+
+        <!--ITENS DO CARROSEL (class = "active" = item aparente no carrosel)-->
         <div class="list">
+
             <div class="item">
-                <div class="car-image">
+
+                <div class="car-img">
                     <img src="img/1.png" alt="Carro-1">
                 </div>
                 <div class="content">
@@ -67,8 +82,20 @@
             </div>
         </div>
 
+        <!--SETAS CLICÁVEIS -->
         <div class="arrows">
+            <button><img src="img/arrow.png" alt="arrow-left"></button>
+            <button><img src="img/arrow.png" alt="arrow-right"></button>
+        </div>
 
+        <!--INDICADOR DO CARROSEL -->
+        <div class="indicators">
+            <div class="number">01</div>
+            <ul>
+                <li class="active"></li>
+                <li></li>
+                <li></li>
+            </ul>
         </div>
     </section>
 
