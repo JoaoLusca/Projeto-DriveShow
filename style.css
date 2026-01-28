@@ -6,7 +6,6 @@
 }
 
 body {
-    background-color: #000;
     color: #fff;
     font-size: 16px;
 }
@@ -20,6 +19,7 @@ header {
     grid-template-columns: 1fr 600px;
     gap: 50px;
     align-items: center;
+    z-index: 3;
 
     & h1 {
         font-family: "Iceberg", sans-serif;
@@ -45,6 +45,36 @@ header {
 }
 
 .hero-section {
+    background-image: radial-gradient(#7f3d9e, #6d00d9);
+    height: 100vh;
+    position: relative;
 
+    & .list {
+        width: 70vw;
+        height: 100%;
+        margin: auto;
+        position: relative;
 
+        & .item {
+            position: absolute;
+            inset: 0;
+
+            & .car-image {
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+
+    & .arrows {
+        
+        & button {
+
+            & img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    }
 }
