@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,21 +8,71 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>DriveShow-Project</title>
 </head>
+
 <body>
     <header>
-        <div class="logo">
-            <h1>DriveShow</h1>
+        <h1 class="logo">DriveShow</h1>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#cars">Carros</a></li>
+                <li><a href="#contact">Fale Conosco</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="box-container" id="home">
+        <div class="list">
+            <div class="item">
+                <div class="car-image">
+                    <img src="img/1.png" alt="Carro-1">
+                </div>
+                <div class="content">
+                    <p class="car-information">Unico Dono</p>
+                    <h2>Ferrari</h2>
+                    <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A totam
+                        cumque quibusdam nesciunt sit ipsum, ullam saepe ducimus error quis quam aliquid labore maiores
+                        quasi in nihil veniam corrupti aperiam.</p>
+                    <button class="btn">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="item active">
+                <div class="car-image">
+                    <img src="img/2.png" alt="Carro-2">
+                </div>
+                <div class="content">
+                    <p class="car-information">Unico Dono</p>
+                    <h2>Ferrari</h2>
+                    <p class="product-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A totam
+                        cumque quibusdam nesciunt sit ipsum, ullam saepe ducimus error quis quam aliquid labore maiores
+                        quasi in nihil veniam corrupti aperiam.</p>
+                    <button class="btn">Saiba Mais</button>
+                </div>
+            </div>
+
+            <div class="item">
+                <div class="car-image">
+                    <img src="img/3.png" alt="Carro-3">
+                </div>
+                <div class="content">
+                    <p class="car-information">Unico Dono</p>
+                    <h2>Ferrari</h2>
+                    <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. A totam
+                        cumque quibusdam nesciunt sit ipsum, ullam saepe ducimus error quis quam aliquid labore maiores
+                        quasi in nihil veniamcorrupti aperiam.</p>
+                    <button class="btn">Saiba Mais</button>
+                </div>
+            </div>
         </div>
 
-        <div>
-            <lul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#contact">Contato</a></li>
+        <div class="arrows">
+
         </div>
-    </header>
+    </section>
 
     <script src="script.js"></script>
 </body>
+
 </html>
