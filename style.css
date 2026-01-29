@@ -71,7 +71,7 @@ header {
 
                 & img {
                     width: 100%;
-                    transform: rotate(-20deg);
+                    transform: rotate(-30deg);
                 }
             }
 
@@ -82,7 +82,7 @@ header {
                 height: 100%;
                 display: flex;
                 flex-direction: column;
-                justify-content: end;
+                justify-content: center;
                 align-items: end;
                 gap: 20px;
 
@@ -91,6 +91,7 @@ header {
                 }
 
                 & h2 {
+                    font-family: "Iceberg", sans-serif;
                     font-size: 8em;
                     line-height: 1em;
                 }
@@ -111,22 +112,56 @@ header {
                     background-color: #beff1b;
                     color: #000;
                     cursor: pointer;
+                    font-weight: bold;
                 }
             }
+            
         }
+
+        &::before {
+            content: '';
+            position: absolute;
+            height: 200px;
+            width: 98%;
+            top: 50%;
+            border-top: 1px solid #fff;
+            transform: translatex(1px);
+        }
+
     }
+    
 
     & .arrows {
+        width: 70vw;
         position: absolute;
-        bottom: 10%;
+        top: 50%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translate(-50%, -25px);
         display: flex;
-        gap: 2rem;
-        z-index: 2;
+        justify-content: space-between;
 
-        & button img {
-            width: 100px;
+        /* ROTACIONA O BOTÃO "SETA" PARA QUE APONTE PARA O OUTRO LADO*/
+        & button:nth-child(1) {
+            transform: scale(-1);
+        }
+
+        & button {
+            top: 60%;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+
+            & img {
+                width: 30px;
+                margin-top: 4px;
+                cursor: pointer;
+            }
+
+            & :hover {
+            background-color: #beff1b;
+        }
         }
     }
 
@@ -144,6 +179,7 @@ header {
 
         & .number {
             font-size: 5em;
+            font-family: "Iceberg", sans-serif;
         }
 
         & ul {
@@ -152,9 +188,13 @@ header {
 
             & li {
                 width: 50px;
-                height: 5px;
+                height: 10px;
+                background-color: #fff;
+                transition: 0.5s;
+            }
+
+            & .active {
                 background-color: #beff1b;
-                
             }
         }
     }
