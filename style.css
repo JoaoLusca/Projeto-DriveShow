@@ -11,6 +11,7 @@ body {
     color: #fff;
     font-size: 18px;
     font-family: "Instrument Sans", sans-serif;
+    overflow-x: hidden
 }
 
 header {
@@ -70,13 +71,13 @@ header {
 
                 & img {
                     width: 100%;
-                    transform: rotate(-30deg);
+                    transform: rotate(-25deg);
                 }
             }
 
             & .content {
                 position: absolute;
-                right: 100px;
+                right: 70px;
                 width: 70%;
                 height: 100%;
                 display: flex;
@@ -91,7 +92,7 @@ header {
 
                 & h2 {
                     font-family: "Iceberg", sans-serif;
-                    font-size: 5em;
+                    font-size: 6rem;
                     line-height: 1em;
                 }
 
@@ -99,7 +100,7 @@ header {
                     color: #ececec;
                     font-size: 16px;
                     text-align: right;
-                    max-width: 500px;
+                    max-width: 450px;
                 }
 
                 & .btn {
@@ -114,7 +115,6 @@ header {
                     font-weight: bold;
                 }
             }
-
         }
 
         &::before {
@@ -151,7 +151,7 @@ header {
             border-radius: 50%;
             border: none;
             cursor: pointer;
-            transition: 0.5s ease-in-out;
+            transition: 0.2s ease-in-out;
 
             & img {
                 width: 30px;
@@ -161,7 +161,7 @@ header {
         }
 
         & button:hover {
-            transition: 0.5s ease-in-out;
+            transition: 0.2s ease-in-out;
             background-color: #beff1b;
         }
     }
@@ -197,6 +197,7 @@ header {
 
         & .active {
             background-color: #beff1b;
+            height: 20px;
         }
     }
 }
@@ -215,7 +216,7 @@ header {
                 & img {
                     transform: rotate(0);
                     transition: 0.5s;
-                    transition-delay: 0.3s;
+                    transition-delay: 0.4s;
                 }
 
             }
@@ -227,20 +228,21 @@ header {
                 .description,
                 .btn {
                     transform: translateX(200px);
+                    opacity: 0;
                     transition: 0.7s;
-                    transition-delay: 0.3s;
-                }
-
-                & h2 {
                     transition-delay: 0.4s;
                 }
 
-                & .description {
+                & h2 {
                     transition-delay: 0.5s;
                 }
 
-                & .btn {
+                & .description {
                     transition-delay: 0.6s;
+                }
+
+                & .btn {
+                    transition-delay: 0.7s;
                 }
             }
         }
@@ -253,7 +255,7 @@ header {
             & .car-image {
 
                 & img {
-                    transform: rotate(-30deg);
+                    transform: rotate(-25deg);
                 }
 
             }
@@ -265,6 +267,7 @@ header {
                 .description,
                 .btn {
                     transform: translateX(0);
+                    opacity: 1;
                 }
             }
         }
