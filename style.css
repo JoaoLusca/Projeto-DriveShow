@@ -9,7 +9,7 @@
 body {
     background-color: #000;
     color: #fff;
-    font-size: 16px;
+    font-size: 18px;
     font-family: "Instrument Sans", sans-serif;
 }
 
@@ -27,7 +27,7 @@ header {
 
     & h1 {
         font-family: "Iceberg", sans-serif;
-        font-size: 3rem;
+        font-size: 4rem;
     }
 
     & .navbar {
@@ -41,7 +41,6 @@ header {
             & li a {
                 color: #fff;
                 font-weight: bold;
-                text-transform: uppercase;
                 transition: 0.3s;
             }
         }
@@ -59,7 +58,7 @@ header {
         margin: auto;
         position: relative;
 
-        & .item {
+        & .item .active {
             position: absolute;
             inset: 0;
 
@@ -92,15 +91,15 @@ header {
 
                 & h2 {
                     font-family: "Iceberg", sans-serif;
-                    font-size: 8em;
+                    font-size: 6em;
                     line-height: 1em;
                 }
 
                 & .description {
                     color: #ececec;
-                    font-size: 18px;
+                    font-size: 16px;
                     text-align: right;
-                    max-width: 600px;
+                    max-width: 500px;
                 }
 
                 & .btn {
@@ -115,7 +114,7 @@ header {
                     font-weight: bold;
                 }
             }
-            
+
         }
 
         &::before {
@@ -129,7 +128,7 @@ header {
         }
 
     }
-    
+
 
     & .arrows {
         width: 70vw;
@@ -152,49 +151,121 @@ header {
             border-radius: 50%;
             border: none;
             cursor: pointer;
+            transition: 0.5s ease-in-out;
 
             & img {
                 width: 30px;
                 margin-top: 4px;
                 cursor: pointer;
             }
+        }
 
-            & :hover {
+        & button:hover {
+            transition: 0.5s ease-in-out;
             background-color: #beff1b;
         }
-        }
+    }
+}
+
+& .indicators {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 200px;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 15px;
+
+    & .number {
+        font-size: 5em;
+        font-family: "Iceberg", sans-serif;
     }
 
-    & .indicators {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translateX(-50%);
-        height: 200px;
-        width: 90vw;
+    & ul {
         display: flex;
-        flex-direction: column;
-        justify-content: end;
-        gap: 15px;
+        gap: 10px;
 
-        & .number {
-            font-size: 5em;
-            font-family: "Iceberg", sans-serif;
+        & li {
+            width: 50px;
+            height: 10px;
+            background-color: #fff;
+            transition: 0.5s;
         }
 
-        & ul {
-            display: flex;
-            gap: 10px;
+        & .active {
+            background-color: #beff1b;
+        }
+    }
+}
 
-            & li {
-                width: 50px;
-                height: 10px;
-                background-color: #fff;
-                transition: 0.5s;
+.hero-section {
+
+    & .list {
+
+        & .item {
+            transform: translateX(100vw);
+            transition: 0.5s;
+            opacity: 0;
+
+            & .car-image {
+
+                & img {
+                    transform: rotate(0);
+                    transition: 0.5s;
+                    transition-delay: 0.3s;
+                }
+
             }
 
-            & .active {
-                background-color: #beff1b;
+            & .content {
+
+                & .car-information,
+                h2,
+                .description,
+                .btn {
+                    transform: translateX(200px);
+                    transition: 0.7s;
+                    transition-delay: 0.3s;
+                }
+
+                & h2 {
+                    transition-delay: 0.4s;
+                }
+
+                & .description {
+                    transition-delay: 0.5s;
+                }
+
+                & .btn {
+                    transition-delay: 0.6s;
+                }
+            }
+        }
+
+        & .active {
+            transform: translateX(0);
+            transition: 0.5s;
+            opacity: 1;
+
+            & .car-image {
+
+                & img {
+                    transform: rotate(-200deg);
+                }
+
+            }
+
+            & .content {
+
+                & .car-information,
+                h2,
+                .description,
+                .btn {
+                    transform: translateX(0);
+                }
             }
         }
     }
