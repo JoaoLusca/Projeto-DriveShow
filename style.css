@@ -44,6 +44,11 @@ header {
                 font-weight: bold;
                 transition: 0.3s;
             }
+
+            & li a:hover {
+                color: #beff1b;
+                font-size: 1.1em;
+            }
         }
     }
 }
@@ -205,9 +210,10 @@ header {
 .hero-section {
 
     & .list {
-
+        --calculation: 1;
+        
         & .item {
-            transform: translateX(100vw);
+            transform: translateX(calc(100vw * var(--calculation)));
             transition: 0.5s;
             opacity: 0;
 
@@ -227,7 +233,7 @@ header {
                 h2,
                 .description,
                 .btn {
-                    transform: translateX(200px);
+                    transform: translateX(calc(200px) * var(--calculation));
                     opacity: 0;
                     transition: 0.7s;
                     transition-delay: 0.4s;
@@ -273,3 +279,5 @@ header {
         }
     }
 }
+
+/* 2º SEÇÃO - CARROS*/

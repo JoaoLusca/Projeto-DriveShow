@@ -5,6 +5,7 @@ const dots = document.querySelectorAll('.dot')
 const numberIndicator = document.querySelector('.number')
 const list = document.querySelector('.list')
 
+
 let active = 0;
 const total = items.length
 let timer;
@@ -54,11 +55,13 @@ startTimer();
 
 //Nos eventos de clique, chamamos o startTimer() após o update
 prevButtom.addEventListener('click', function () {
+    list.style.setProperty('--calculation', -1);
     update(-1);
     startTimer(); // Resetamos o relógio aqui
 })
 
 nextButtom.addEventListener('click', function () {
+    list.style.setProperty('--calculation', 1);
     update(1);
     startTimer(); // Resetamos o relógio aqui
 })
