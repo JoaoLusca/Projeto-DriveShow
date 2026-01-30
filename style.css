@@ -58,7 +58,7 @@ header {
         margin: auto;
         position: relative;
 
-        & .item .active {
+        & .item {
             position: absolute;
             inset: 0;
 
@@ -91,7 +91,7 @@ header {
 
                 & h2 {
                     font-family: "Iceberg", sans-serif;
-                    font-size: 6em;
+                    font-size: 5em;
                     line-height: 1em;
                 }
 
@@ -253,7 +253,7 @@ header {
             & .car-image {
 
                 & img {
-                    transform: rotate(-200deg);
+                    transform: rotate(-30deg);
                 }
 
             }
