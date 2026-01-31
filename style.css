@@ -280,4 +280,50 @@ header {
     }
 }
 
+/* DIV DE SCROLL INFINITO*/
+.infinite-scroll {
+    padding: 40px auto;
+    height: 230px;
+    width: 100%;
+    /*border: 5px solid red; /*apenas para saber até onde vai a div*/
+    display: flex;
+    background-color: #c6e772;
+
+ & .infinite-scroll::-webkit-scrollbar {
+        display: none; /*esconde a barra de rolagem*/
+    }
+
+    & .group {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6em;
+        animation: spin 5s infinite linear;
+        padding-right: 1em;
+
+        & .card img{
+            font-family: "Iceberg", sans-serif;
+            flex: 0 0 5em;
+            width: 3em;
+            height: 3em;
+            margin-right: 6em;
+            /*background: cornflowerblue;*/
+            font-size: 4.8rem;
+            border-radius: 0.2em;
+            text-align: center;
+            align-content: center;
+            width: 40%;
+            height: 40%;
+        }
+    }
+}
+
+@keyframes spin {
+    from {translate: 0;}
+    to {translate: -100%;}
+}
+
 /* 2º SEÇÃO - CARROS*/
+ .cars-section {
+    background-image: radial-gradient(#7f3d9e, #6d00d9);
+ }
