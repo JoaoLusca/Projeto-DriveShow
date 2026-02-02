@@ -331,11 +331,12 @@ header {
 
 /* 2º SEÇÃO - CARROS*/
 .cars-section {
+    padding: 3rem;
     background-image: radial-gradient(#7f3d9e, #6d00d9);
-    border: 5px solid red;
+    /*border: 5px solid red;*/
     
     & .porsche {
-        border: 5px solid blue;
+        /*border: 5px solid blue;*/
         display: flex;
         width: 80%;
         justify-content: left;
@@ -343,30 +344,59 @@ header {
         padding: 2rem;
         margin: auto;
         margin-bottom: 40px;
-        margin-top: 40px;
         
     }
 
     & .ferrari {
-        border: 5px solid green;
+        /*border: 5px solid green;*/
         display: flex;
         width: 80%;
-        justify-content: center;
-        align-items: center;
+        justify-content: end;
+        align-items: end;
         padding: 2rem;
         margin: auto;
         margin-bottom: 40px;
     }
 
     & .lamborghini {
-        border: 5px solid yellow;
+        /*border: 5px solid yellow;*/
         display: flex;
         width: 80%;
         justify-content: left;
         align-items: left;
         padding: 2rem;
         margin: auto;
-        margin-bottom: 40px;
+    }
+
+    & .car-content-ferrari {
+        background-color: #beff1b;
+        border-radius: 10px;
+        padding: 2rem;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+
+        & h3 {
+            color: #000;
+            font-family: "Iceberg", sans-serif;
+            font-size: 2rem;
+            margin-top: 1rem;
+        }
+
+        & iframe {
+            border-radius: 10px;
+            width: 500px;
+        }
+
+        p {
+            text-align: justify;
+            color: #000;
+            margin-top: 1rem;
+            width: 500px;
+        }
     }
 
     & .car-content {
@@ -374,7 +404,11 @@ header {
         border-radius: 10px;
         padding: 2rem;
         width: 600px;
+        display: flex;
+        flex-direction: column;
         align-items: center;
+        text-align: center;
+        gap: 1rem;
 
         & h3 {
             color: #000;
