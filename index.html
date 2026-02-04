@@ -98,7 +98,7 @@
         </div>
     </section>
 
-    <section class="infinite-scroll"> 
+    <section class="infinite-scroll">
         <div class="group">
             <div class="card"><img src="img/ferrari-logo.png" alt=""></div>
             <div class="card"><img src="img/porsche-logo.png" alt=""></div>
@@ -112,41 +112,71 @@
         </div>
     </section>
 
-    <section class="cars-section" id="cars">
+    <section class="cars-section" id="cars" data-next="#nextSection">
 
-            <div class="porsche">
-                <div class="car-content">
+        <svg class="connectors" aria-hidden="true">
+            <path class="connector" data-step="1"></path>
+            <path class="connector" data-step="2"></path>
+            <path class="connector" data-step="3"></path>
+        </svg>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2epBWNFbfpg?si=pp6BB2zzYD6RnOJN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h3>Porsche 911 Turbo S</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quisquam autem quis? Repellat ipsa nulla ipsam enim accusantium, placeat temporibus vitae quisquam asperiores sint.</p>
-                    
-                </div>
+        <div class="porsche">
+            <div class="car-content">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2epBWNFbfpg?si=pp6BB2zzYD6RnOJN"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Porsche 911 Turbo S</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quisquam autem quis? Repellat ipsa
+                    nulla ipsam enim accusantium, placeat temporibus vitae quisquam asperiores sint.</p>
+
             </div>
+        </div>
 
-            <div class="ferrari">
-                <div class="car-content-ferrari">
+        <div class="line-trigger" data-fire="1"></div>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2epBWNFbfpg?si=pp6BB2zzYD6RnOJN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h3>Ferrari</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit vero quisquam autem quis? Repellat ipsa nulla ipsam enim accusantium, placeat temporibus vitae quisquam asperiores sint.</p>
+        <div class="ferrari">
+            <div class="car-content-ferrari">
 
-                </div>
-            </div> 
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2epBWNFbfpg?si=pp6BB2zzYD6RnOJN"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Ferrari</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit vero quisquam autem quis? Repellat ipsa
+                    nulla ipsam enim accusantium, placeat temporibus vitae quisquam asperiores sint.</p>
 
-            <div class="lamborghini">
-                <div class="car-content">
+            </div>
+        </div>
 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/2epBWNFbfpg?si=pp6BB2zzYD6RnOJN" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    <h3>Lamborghini</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quisquam autem quis? Repellat ipsa nulla ipsam enim accusantium, placeat temporibus vitae quisquam asperiores sint.</p>
+        <div class="line-trigger" data-fire="2"></div>
 
-                </div>
-            </div> 
-    
+        <div class="lamborghini">
+            <div class="car-content">
+
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/2epBWNFbfpg?si=pp6BB2zzYD6RnOJN"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <h3>Lamborghini</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero quisquam autem quis? Repellat ipsa
+                    nulla ipsam enim accusantium, placeat temporibus vitae quisquam asperiores sint.</p>
+
+            </div>
+        </div>
+
+        <div class="line-trigger" data-fire="3"></div>
+
+    </section>
+
+    <section id="nextSection" style="height:600px; background:#beff1b;">
+        Próxima seção
     </section>
 
     <script src="script.js"></script>
+    <script src="animacao-linhas.js"></script>
+
 </body>
 
 </html>

@@ -331,6 +331,7 @@ header {
 
 /* 2º SEÇÃO - CARROS*/
 .cars-section {
+    position: relative;
     padding: 3rem;
     background-image: radial-gradient(#7f3d9e, #6d00d9);
     /*border: 5px solid red;*/
@@ -429,4 +430,46 @@ header {
             width: 500px;
         }
     }
+}
+
+.cars-section .connectors{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:0;
+}
+
+.cars-section .porsche,
+.cars-section .ferrari,
+.cars-section .lamborghini{
+  position:relative;
+  z-index:1;
+}
+
+/* gatilhos invisíveis */
+.cars-section .line-trigger{
+  height: 1px;
+}
+
+/* paths */
+.cars-section .connector{
+  fill:none;
+  stroke:#beff1b;
+  stroke-width: 100;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+}
+
+/* animação ao disparar */
+.cars-section .connector.is-playing{
+  animation: drawLine 900ms ease forwards;
+}
+
+@keyframes drawLine{
+  to { stroke-dashoffset: 0; }
 }
