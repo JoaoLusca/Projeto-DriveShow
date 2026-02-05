@@ -458,7 +458,7 @@ header {
   fill:none;
   stroke:#beff1b;
   stroke-width: 100;
-  stroke-linecap: round;
+  stroke-linecap:  square;
   stroke-linejoin: round;
 
   stroke-dasharray: 1;
@@ -467,9 +467,12 @@ header {
 
 /* animação ao disparar */
 .cars-section .connector.is-playing{
-  animation: drawLine 900ms ease forwards;
+  animation: drawLine 800ms ease forwards;
 }
 
 @keyframes drawLine{
   to { stroke-dashoffset: 0; }
 }
+
+/*3º SECTION CONTATOS*/
+
