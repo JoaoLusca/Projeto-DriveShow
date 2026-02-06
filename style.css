@@ -560,3 +560,263 @@ header {
         }
     }
 }
+
+/*RESPONSIVIDADE PARA ATÉ 600PX*/
+
+@media screen and (max-width: 600px) {
+
+    /* HEADER + MENU: manter horizontal, sem hamburger, sem quebrar layout */
+    header {
+        width: 92vw;
+        grid-template-columns: 1fr;
+        /* tira a coluna fixa de 600px */
+        gap: 12px;
+        padding-top: 1.25rem;
+        justify-items: center;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+        line-height: 1;
+    }
+
+    header .navbar ul {
+        /* em vez de grid com 200px fixo, usa flex e mantém igual desktop */
+        display: flex;
+        gap: 16px;
+        padding-right: 0;
+        justify-content: center;
+        flex-wrap: nowrap;
+    }
+
+    header .navbar ul li a {
+        font-size: 0.95rem;
+    }
+
+    /* HERO: empilhar imagem acima do texto e remover angulação */
+    .hero-section .list {
+        width: 92vw;
+    }
+
+    .hero-section .list::before {
+        display: none;
+        /* linha horizontal no meio costuma atrapalhar no mobile */
+    }
+
+    .hero-section .list .item {
+        position: absolute;
+        inset: 0;
+    }
+
+    /* tira o absoluto e deixa o conteúdo fluir */
+    .hero-section .list .item .car-image {
+        position: relative;
+        top: auto;
+        transform: none;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: 110px;
+        /* espaço para o header absoluto */
+    }
+
+    .hero-section .list .item .car-image img {
+        transform: rotate(0);
+        /* remove a angulação */
+        width: min(520px, 92%);
+    }
+
+    .hero-section .list .item .content {
+        position: relative;
+        right: auto;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        text-align: center;
+        padding: 18px 10px 0;
+    }
+
+    .hero-section .list .item .content h2 {
+        font-size: 2.6rem;
+        line-height: 1.05;
+    }
+
+    .hero-section .list .item .content .description {
+        text-align: center;
+        max-width: 34ch;
+    }
+
+    /* setas e indicadores ajustados para não sobrepor */
+    .hero-section .arrows {
+        width: 92vw;
+        top: auto;
+        bottom: 18px;
+        transform: translateX(-50%);
+    }
+
+    .indicators {
+        width: 92vw;
+        top: auto;
+        bottom: 80px;
+        transform: translateX(-50%);
+        height: auto;
+        gap: 10px;
+    }
+
+    .indicators .number {
+        font-size: 3.2em;
+    }
+
+    @media screen and (max-width: 600px) {
+
+        /* RESPONSIVIDADE PARA ATÉ 600PX */
+        @media screen and (max-width: 600px) {
+
+            /* HERO: layout em coluna no mobile, imagem em cima sem angulação */
+            .hero-section {
+                position: relative;
+                height: 650px;
+            }
+
+            .hero-section .list {
+                width: 92vw;
+                padding-bottom: 100px;
+                /* espaço para os controles (setas + indicadores) */
+            }
+
+            .hero-section .list::before {
+                display: none;
+                /* a linha horizontal central atrapalha no mobile */
+            }
+
+            /* Ajusta cada slide para empilhar */
+            .hero-section .list .item {
+                position: absolute;
+                inset: 0;
+            }
+
+            /* Imagem deixa de ser absoluta, vai para cima do texto */
+            .hero-section .list .item .car-image {
+                position: relative;
+                top: auto;
+                transform: none;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                padding-top: 110px;
+                /* se o header for absolute, evita sobreposição */
+            }
+
+            .hero-section .list .item .car-image img {
+                transform: rotate(0);
+                /* remove angulação no mobile */
+                width: min(520px, 92%);
+            }
+
+            /* Texto vira bloco normal, centralizado */
+            .hero-section .list .item .content {
+                position: relative;
+                right: auto;
+                width: 100%;
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                text-align: center;
+                gap: 14px;
+                padding: 16px 10px 0;
+            }
+
+            .hero-section .list .item .content h2 {
+                font-size: 2.8rem;
+                line-height: 1.05;
+            }
+
+            .hero-section .list .item .content .description {
+                text-align: justify;
+                max-width: 36ch;
+            }
+
+            /* CONTROLES: setas nas laterais e indicadores no meio, na mesma linha */
+            .hero-section .arrows {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 18px;
+                /* aproxima do carrossel */
+                top: auto;
+                width: 92vw;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                z-index: 6;
+                pointer-events: none;
+                /* container não bloqueia cliques */
+            }
+
+            .hero-section .arrows button {
+                pointer-events: auto;
+                /* botões clicáveis */
+                width: 44px;
+                height: 44px;
+            }
+
+            .hero-section .arrows button img {
+                width: 26px;
+                margin-top: 3px;
+            }
+
+            .indicators {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 18px;
+                /* mesma altura das setas */
+                top: auto;
+
+                width: 92vw;
+                height: auto;
+
+                display: flex;
+                flex-direction: row;
+                /* muda de coluna para linha */
+                justify-content: center;
+                align-items: center;
+                gap: 12px;
+
+                z-index: 7;
+                pointer-events: none;
+                /* não bloquear clique das setas */
+            }
+
+            .indicators .number {
+                font-size: 2.8em;
+                line-height: 1;
+                pointer-events: none;
+            }
+
+            .indicators ul {
+                display: flex;
+                gap: 10px;
+                pointer-events: auto;
+                /* se seus dots forem clicáveis */
+            }
+
+            .indicators ul li {
+                width: 26px;
+                /* menor para caber no mobile */
+                height: 8px;
+            }
+
+            .indicators ul .active {
+                height: 14px;
+            }
+
+        }
+
+    }
+}
