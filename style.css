@@ -335,7 +335,7 @@ header {
     padding: 3rem;
     background-image: radial-gradient(#7f3d9e, #6d00d9);
     /*border: 5px solid red;*/
-    
+
     & .porsche {
         /*border: 5px solid blue;*/
         display: flex;
@@ -345,7 +345,7 @@ header {
         padding: 2rem;
         margin: auto;
         margin-bottom: 40px;
-        
+
     }
 
     & .ferrari {
@@ -432,47 +432,104 @@ header {
     }
 }
 
-.cars-section .connectors{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  pointer-events:none;
-  z-index:0;
+.cars-section .connectors {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
 }
 
 .cars-section .porsche,
 .cars-section .ferrari,
-.cars-section .lamborghini{
-  position:relative;
-  z-index:1;
+.cars-section .lamborghini {
+    position: relative;
+    z-index: 1;
 }
 
 /* gatilhos invisíveis */
-.cars-section .line-trigger{
-  height: 1px;
+.cars-section .line-trigger {
+    height: 1px;
 }
 
 /* paths */
-.cars-section .connector{
-  fill:none;
-  stroke:#beff1b;
-  stroke-width: 100;
-  stroke-linecap:  square;
-  stroke-linejoin: round;
+.cars-section .connector {
+    fill: none;
+    stroke: #beff1b;
+    stroke-width: 100;
+    stroke-linecap: square;
+    stroke-linejoin: round;
 
-  stroke-dasharray: 1;
-  stroke-dashoffset: 1;
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
 }
 
 /* animação ao disparar */
-.cars-section .connector.is-playing{
-  animation: drawLine 800ms ease forwards;
+.cars-section .connector.is-playing {
+    animation: drawLine 800ms ease forwards;
 }
 
-@keyframes drawLine{
-  to { stroke-dashoffset: 0; }
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
 }
 
 /*3º SECTION CONTATOS*/
 
+.contact-section {
+    height: 600px;
+    background-color: #beff1b;
+    padding: 2rem;
+
+    & .contact-content {
+        height: 100%;
+        display: flex;
+        gap: 3rem;
+        padding: 2rem;
+
+        & .text {
+            width: 40%;
+
+            & h2 {
+                font-size: 3rem;
+                color: #000;
+                font-family: "Iceberg", sans-serif;
+                margin-bottom: 30px;
+            }
+
+            & p {
+                color: #000;
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 1.5;
+                text-align: justify;
+            }
+        }
+
+        & .forms {
+            width: 60%;
+            height: 100%;
+            padding: 2rem;
+            background-image: radial-gradient(#7f3d9e, #6d00d9);
+            border-radius: 20px;
+
+            & h3 {
+               font-family: "Iceberg", sans-serif;
+                font-size: 3rem;
+            }
+
+            & form {
+                display: grid;
+                grid-template-columns: 1;
+
+                & input {
+                    padding: 10px;
+                    border: 0px;
+                    border-radius: 10px;
+                }
+            }
+        }
+    }
+}
