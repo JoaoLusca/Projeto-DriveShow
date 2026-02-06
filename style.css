@@ -479,7 +479,7 @@ header {
 /*3º SECTION CONTATOS*/
 
 .contact-section {
-    height: 600px;
+    height: 620px;
     background-color: #beff1b;
     padding: 2rem;
 
@@ -489,11 +489,13 @@ header {
         gap: 3rem;
         padding: 2rem;
 
+
         & .text {
             width: 40%;
+            padding: 2rem;
 
             & h2 {
-                font-size: 3rem;
+                font-size: 4rem;
                 color: #000;
                 font-family: "Iceberg", sans-serif;
                 margin-bottom: 30px;
@@ -501,10 +503,11 @@ header {
 
             & p {
                 color: #000;
-                font-size: 18px;
-                font-weight: 400;
+                font-size: 16px;
+                font-weight: 500;
                 line-height: 1.5;
                 text-align: justify;
+                width: 600px;
             }
         }
 
@@ -516,18 +519,42 @@ header {
             border-radius: 20px;
 
             & h3 {
-               font-family: "Iceberg", sans-serif;
-                font-size: 3rem;
+                font-family: "Iceberg", sans-serif;
+                font-size: 4rem;
+                margin-bottom: 0.8rem;
             }
 
             & form {
                 display: grid;
                 grid-template-columns: 1;
 
-                & input {
-                    padding: 10px;
-                    border: 0px;
+                & label,
+                input,
+                textarea {
+                    display: block;
+                    width: 100%;
+                }
+
+                & input,
+                textarea {
+                    font: inherit;
+                    padding: 0.8rem;
+                    margin-bottom: 1rem;
+                    border: 1px solid transparent;
                     border-radius: 10px;
+                }
+
+                & textarea {
+                    height: 100px;
+                }
+
+                & button {
+                    background-color: #beff1b;
+                    border-radius: 10px;
+                    border: 1px solid transparent;
+                    margin-top: 0.4rem;
+                    width: 10%;
+                    padding: 10px 10px;
                 }
             }
         }
