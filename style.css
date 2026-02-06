@@ -6,7 +6,8 @@
     text-decoration: none;
 }
 
-html, body {
+html,
+body {
     background-color: #000;
     color: #fff;
     font-size: 18px;
@@ -483,6 +484,7 @@ header {
     height: 620px;
     background-color: #beff1b;
     padding: 2rem;
+    border: none;
 
     & .contact-content {
         height: 100%;
@@ -521,7 +523,7 @@ header {
 
             & h3 {
                 font-family: "Iceberg", sans-serif;
-                font-size: 4rem;
+                font-size: 2rem;
                 margin-bottom: 0.8rem;
             }
 
@@ -534,11 +536,13 @@ header {
                 textarea {
                     display: block;
                     width: 100%;
+                    font-size: 16px;
                 }
 
                 & input,
                 textarea {
                     font: inherit;
+                    font-size: 16px;
                     padding: 0.8rem;
                     margin-bottom: 1rem;
                     border: 1px solid transparent;
@@ -566,277 +570,272 @@ header {
 
 @media screen and (max-width: 600px) {
 
-    /* HEADER + MENU: manter horizontal, sem hamburger, sem quebrar layout */
-    header {
-        width: 92vw;
-        grid-template-columns: 1fr;
-        /* tira a coluna fixa de 600px */
-        gap: 12px;
-        padding-top: 1.25rem;
-        justify-items: center;
-        text-align: center;
-    }
+  /* evita arrasto lateral e ajuda no touch */
+  html, body{
+    overflow-x: hidden;
+  }
+  body{
+    touch-action: pan-y;
+  }
 
-    header h1 {
-        font-size: 2.2rem;
-        line-height: 1;
-    }
+  /* HEADER + MENU */
+  header{
+    width: 92vw;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding-top: 1.25rem;
+    justify-items: center;
+    text-align: center;
+  }
 
-    header .navbar ul {
-        /* em vez de grid com 200px fixo, usa flex e mantém igual desktop */
-        display: flex;
-        gap: 16px;
-        padding-right: 0;
-        justify-content: center;
-        flex-wrap: nowrap;
-    }
+  header h1{
+    font-size: 2.2rem;
+    line-height: 1;
+  }
 
-    header .navbar ul li a {
-        font-size: 0.95rem;
-    }
+  header .navbar ul{
+    display: flex;
+    gap: 16px;
+    padding-right: 0;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
 
-    /* HERO: empilhar imagem acima do texto e remover angulação */
-    .hero-section .list {
-        width: 92vw;
-    }
+  header .navbar ul li a{
+    font-size: 0.95rem;
+  }
 
-    .hero-section .list::before {
-        display: none;
-        /* linha horizontal no meio costuma atrapalhar no mobile */
-    }
+  /* HERO SECTION */
+  .hero-section{
+    position: relative;
+    height: 650px;
+  }
 
-    .hero-section .list .item {
-        position: absolute;
-        inset: 0;
-    }
+  .hero-section .list{
+    width: 92vw;
+    padding-bottom: 110px; /* espaço para controles */
+  }
 
-    /* tira o absoluto e deixa o conteúdo fluir */
-    .hero-section .list .item .car-image {
-        position: relative;
-        top: auto;
-        transform: none;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-top: 110px;
-        /* espaço para o header absoluto */
-    }
+  .hero-section .list::before{
+    display: none;
+  }
 
-    .hero-section .list .item .car-image img {
-        transform: rotate(0);
-        /* remove a angulação */
-        width: min(520px, 92%);
-    }
+  .hero-section .list .item{
+    position: absolute;
+    inset: 0;
+  }
 
-    .hero-section .list .item .content {
-        position: relative;
-        right: auto;
-        width: 100%;
-        height: auto;
-        align-items: center;
-        text-align: center;
-        padding: 18px 10px 0;
-    }
+  .hero-section .list .item .car-image{
+    position: relative;
+    top: auto;
+    transform: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-top: 110px;
+  }
 
-    .hero-section .list .item .content h2 {
-        font-size: 2.6rem;
-        line-height: 1.05;
-    }
+  .hero-section .list .item .car-image img{
+    transform: rotate(0);
+    width: min(520px, 92%);
+    max-width: 100%;
+  }
 
-    .hero-section .list .item .content .description {
-        text-align: center;
-        max-width: 34ch;
-    }
+  .hero-section .list .item .content{
+    position: relative;
+    right: auto;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    gap: 14px;
+    padding: 16px 10px 0;
+  }
 
-    /* setas e indicadores ajustados para não sobrepor */
-    .hero-section .arrows {
-        width: 92vw;
-        top: auto;
-        bottom: 18px;
-        transform: translateX(-50%);
-    }
+  .hero-section .list .item .content h2{
+    font-size: 2.8rem;
+    line-height: 1.05;
+  }
 
-    .indicators {
-        width: 92vw;
-        top: auto;
-        bottom: 80px;
-        transform: translateX(-50%);
-        height: auto;
-        gap: 10px;
-    }
+  .hero-section .list .item .content .description{
+    text-align: center;
+    max-width: 36ch;
+  }
 
-    .indicators .number {
-        font-size: 3.2em;
-    }
+  /* CONTROLES DO CARROSSEL: setas laterais, número + dots no meio */
+  .hero-section .arrows{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 18px;
+    top: auto;
+    width: 92vw;
 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    /* RESPONSIVIDADE PARA ATÉ 600PX */
-    @media screen and (max-width: 600px) {
+    z-index: 6;
+    pointer-events: none;
+  }
 
-        body {
-            overflow-x: hidden
-        }
+  .hero-section .arrows button{
+    pointer-events: auto;
+    width: 44px;
+    height: 44px;
+  }
 
-        /* HERO: layout em coluna no mobile, imagem em cima sem angulação */
-        .hero-section {
-            position: relative;
-            height: 650px;
-        }
+  .hero-section .arrows button img{
+    width: 26px;
+    margin-top: 3px;
+  }
 
-        .hero-section .list {
-            width: 92vw;
-            padding-bottom: 100px;
-            /* espaço para os controles (setas + indicadores) */
-        }
+  .indicators{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 18px;
+    top: auto;
 
-        .hero-section .list::before {
-            display: none;
-            /* a linha horizontal central atrapalha no mobile */
-        }
+    width: 92vw;
+    height: auto;
 
-        /* Ajusta cada slide para empilhar */
-        .hero-section .list .item {
-            position: absolute;
-            inset: 0;
-        }
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
 
-        /* Imagem deixa de ser absoluta, vai para cima do texto */
-        .hero-section .list .item .car-image {
-            position: relative;
-            top: auto;
-            transform: none;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            padding-top: 110px;
-            /* se o header for absolute, evita sobreposição */
-        }
+    z-index: 7;
+    pointer-events: none;
+  }
 
-        .hero-section .list .item .car-image img {
-            transform: rotate(0);
-            /* remove angulação no mobile */
-            width: min(520px, 92%);
-        }
+  .indicators .number{
+    font-size: 2.8em;
+    line-height: 1;
+    pointer-events: none;
+  }
 
-        /* Texto vira bloco normal, centralizado */
-        .hero-section .list .item .content {
-            position: relative;
-            right: auto;
-            width: 100%;
-            height: auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            text-align: center;
-            gap: 14px;
-            padding: 16px 10px 0;
-        }
+  .indicators ul{
+    display: flex;
+    gap: 10px;
+    pointer-events: auto;
+  }
 
-        .hero-section .list .item .content h2 {
-            font-size: 2.8rem;
-            line-height: 1.05;
-        }
+  .indicators ul li{
+    width: 26px;
+    height: 8px;
+  }
 
-        .hero-section .list .item .content .description {
-            text-align: justify;
-            max-width: 36ch;
-        }
+  .indicators ul .active{
+    height: 14px;
+  }
 
-        /* CONTROLES: setas nas laterais e indicadores no meio, na mesma linha */
-        .hero-section .arrows {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 18px;
-            /* aproxima do carrossel */
-            top: auto;
-            width: 92vw;
+  /* INFINITE SCROLL (sem SCSS) */
+  .infinite-scroll{
+    height: 170px;
+  }
 
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+  .infinite-scroll .group{
+    gap: 3em;
+  }
 
-            z-index: 6;
-            pointer-events: none;
-            /* container não bloqueia cliques */
-        }
+  .infinite-scroll .group .card img{
+    width: 120px;
+    height: 120px;
+    margin-right: 1em;
+  }
 
-        .hero-section .arrows button {
-            pointer-events: auto;
-            /* botões clicáveis */
-            width: 44px;
-            height: 44px;
-        }
+  /* CARS SECTION: centralizado no mobile */
+  .cars-section{
+    padding: 1.25rem;
+    position: relative;
+  }
 
-        .hero-section .arrows button img {
-            width: 26px;
-            margin-top: 3px;
-        }
+  /* garante que o SVG não trave scroll por toque */
+  .cars-section .connectors{
+    pointer-events: none;
+  }
 
-        .indicators {
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            bottom: 18px;
-            /* mesma altura das setas */
-            top: auto;
+  .cars-section .porsche,
+  .cars-section .ferrari,
+  .cars-section .lamborghini{
+    width: 100%;
+    padding: 0;
+    margin: 0 auto 28px;
+    justify-content: center;
+    align-items: center;
+  }
 
-            width: 92vw;
-            height: auto;
+  .cars-section .car-content,
+  .cars-section .car-content-ferrari{
+    width: 100%;
+    max-width: 520px;
+    padding: 1.25rem;
+    box-sizing: border-box;
+  }
 
-            display: flex;
-            flex-direction: row;
-            /* muda de coluna para linha */
-            justify-content: center;
-            align-items: center;
-            gap: 12px;
+  .cars-section .car-content iframe,
+  .cars-section .car-content-ferrari iframe{
+    width: 100%;
+    height: 220px;
+    max-width: 100%;
+  }
 
-            z-index: 7;
-            pointer-events: none;
-            /* não bloquear clique das setas */
-        }
+  .cars-section .car-content p,
+  .cars-section .car-content-ferrari p{
+    width: 100%;
+  }
 
-        .indicators .number {
-            font-size: 2.8em;
-            line-height: 1;
-            pointer-events: none;
-        }
+  /* linha do SVG no mobile: não use 30 com square, fica “bruta” e evidencia frestas */
+  .cars-section .connector{
+    stroke-width: 12;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    shape-rendering: geometricPrecision;
+  }
 
-        .indicators ul {
-            display: flex;
-            gap: 10px;
-            pointer-events: auto;
-            /* se seus dots forem clicáveis */
-        }
+  /* CONTACT SECTION: texto antes do formulário no mobile */
+  .contact-section{
+    height: auto;
+    padding: 1.25rem;
+  }
 
-        .indicators ul li {
-            width: 26px;
-            /* menor para caber no mobile */
-            height: 8px;
-        }
+  .contact-section .contact-content{
+    flex-direction: column;
+    gap: 18px;
+    padding: 0;
+  }
 
-        .indicators ul .active {
-            height: 14px;
-        }
+  .contact-section .contact-content .text{
+    order: 1;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
 
-        /*RESPONSIVIDADE ROLAGEM INFINITA*/
+  .contact-section .contact-content .text p{
+    width: 100%;
+  }
 
-        .infinite-scroll {
-            height: 170px;
+  .contact-section .contact-content .forms{
+    order: 2;
+    width: 100%;
+    padding: 1.25rem;
+    box-sizing: border-box;
+  }
 
-            & .group {
-                gap: 3em;
-            }
+  .contact-section .contact-content .forms form{
+    display: grid;
+    gap: 12px;
+  }
 
-            & .group .card img {
-                width: 120px;
-                height: 120px;
-                margin-right: 1em;
-            }
-        }
-
-
-    }
-
+  .contact-section .contact-content .forms form button{
+    width: 100%;
+    min-width: 0;
+    justify-self: stretch;
+  }
 }
