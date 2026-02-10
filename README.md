@@ -27,43 +27,43 @@ Projeto-DriveShow/
 │   ├── carros/
 │   └── background/
 └── README.md
-🚀 Funcionalidades
-Carrossel interativo de imagens de carros
+```
+## Funcionalidades
 
-Animações visuais com CSS e JavaScript
+- Carrossel interativo de imagens de carros
+- Animações visuais com CSS e JavaScript
+- Layout responsivo para visualização em dispositivos móveis e desktop
+- Efeitos de transição ao navegar pelo carrossel
 
-Layout responsivo para visualização em mobile e desktop
+## Demonstração
 
-Efeitos de transição ao navegar pelo carrossel
-
-📌 Demonstração
-Uma vez publicado em GitHub Pages (opcional), o projeto pode ser acessado diretamente com:
+Caso o projeto esteja publicado em GitHub Pages, ele pode ser acessado pelo link:
 
 https://joaolusca.github.io/Projeto-DriveShow/
-(Substitua pelo link atualizado de publicação, se houver)
 
-✔️ Boas Práticas
-Este projeto foi estruturado com:
 
-Código limpo e organizado
+_(Substitua pelo link atualizado de publicação, se houver)_
 
-Separação de responsabilidades (HTML, CSS e JS)
+## Boas Práticas
 
-Uso de classes CSS descritivas
+O projeto foi estruturado seguindo os princípios:
 
-Funcionalidade do carrossel feita em JS puro
+- Código limpo e organizado
+- Separação de responsabilidades entre HTML, CSS e JS
+- Uso de classes CSS descritivas
+- Funcionalidade do carrossel feita com JavaScript puro
 
-📈 Possíveis Melhorias
+## Possíveis Melhorias
+
 Você pode evoluir o projeto incluindo:
 
-Integração de conteúdo dinâmico via API
+- Integração de conteúdo dinâmico via API
+- Filtro por categorias ou tipos de carros
+- Back-end ou CMS para gerenciamento dos modelos
+- Uso de frameworks como React ou Vue para maior escalabilidade
 
-Filtro por categorias ou tipos de carros
+## Autor
 
-Adição de backend ou CMS para gerenciamento dos modelos
-
-Uso de frameworks como React ou Vue para maior escalabilidade
-
-🧑‍💻 Autor
-Desenvolvido por João Lucas
-Portfólio: https://codecorttex.com.br
+Desenvolvido por **João Lucas**  
+Portfólio:  
+https://codecorttex.com.br/projetos
