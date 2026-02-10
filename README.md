@@ -41,9 +41,6 @@ Caso o projeto esteja publicado em GitHub Pages, ele pode ser acessado pelo link
 
 https://joaolusca.github.io/Projeto-DriveShow/
 
-
-_(Substitua pelo link atualizado de publicação, se houver)_
-
 ## Boas Práticas
 
 O projeto foi estruturado seguindo os princípios:
